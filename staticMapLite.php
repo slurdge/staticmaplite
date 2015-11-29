@@ -403,7 +403,8 @@ Class staticMapLite
         }
     }
 
+    public static function get() {
+        $map = new self();
+        print $map->showMap();
+    }
 }
-
-$map = new staticMapLite();
-print $map->showMap();
