@@ -25,8 +25,8 @@
  *
  */
 
-error_reporting(0);
-ini_set('display_errors', 'off');
+error_reporting(1);
+ini_set('display_errors', 'on');
 
 Class staticMapLite
 {
@@ -77,10 +77,10 @@ Class staticMapLite
 
 
     protected $useTileCache = true;
-    protected $tileCacheBaseDir = '../cache/tiles';
+    protected $tileCacheBaseDir = './cache/tiles';
 
     protected $useMapCache = true;
-    protected $mapCacheBaseDir = '../cache/maps';
+    protected $mapCacheBaseDir = './cache/maps';
     protected $mapCacheID = '';
     protected $mapCacheFile = '';
     protected $mapCacheExtension = 'png';
@@ -408,3 +408,5 @@ Class staticMapLite
         print $map->showMap();
     }
 }
+
+staticMapLite::get();
